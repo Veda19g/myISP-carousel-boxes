@@ -1,0 +1,42 @@
+/* ImageCarousel.css */
+
+ .carousel-section{
+  margin-top: 5px;
+ }
+  
+  .carousel {
+    width: 100%;
+  }
+  
+  .carousel-item {
+    display: flex;
+    justify-content: center;
+    position: relative; /* Ensure that the position is relative for absolute positioning of dots */
+  }
+  
+  .slick-dots {
+    position: absolute;
+    bottom: 20px; /* Adjust the distance from the bottom as needed */
+    left: 50%;
+    transform: translateX(-50%);
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .slick-dot {
+    width: 10px; /* Adjust the dot size */
+    height: 10px; /* Adjust the dot size */
+    background-color: #fff; /* Adjust the dot color */
+    border-radius: 50%;
+    margin: 0 5px; /* Adjust the space between dots */
+    cursor: pointer;
+  }
+  
+  .slick-dot.slick-active {
+    background-color: #007bff; /* Adjust the active dot color */
+  }
+  
