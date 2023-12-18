@@ -15,18 +15,30 @@ const Box = ({ title, subtitles }) => {
       <div className="box-heading">{title}</div>
       <div className="box-content">
         {subtitles.map((subtitle, index) => (
-          <div className="bar" key={index}>
-            <span>{subtitle}</span>
-            <button onClick={() => toggleMinimize(index)}>
-              {!boxStates[index] ? "-" : "+"}
-            </button>
-          </div>
+         <div className={!boxStates[index] ? "bar" : "bar-maximized"} key={index}>
+         <div className="bar-content">
+           <span>{subtitle}</span>
+           <button onClick={() => toggleMinimize(index)}>
+             {!boxStates[index] ? "-" : "+"}
+           </button>
+         </div>
+         {boxStates[index] && (
+           <div className="list-links">
+             <ul>
+               <li>Vedang</li>
+               <li>Vedang</li>
+               <li>Vedang</li>
+               <li>Vedang</li>
+             </ul>
+           </div>
+         )}
+       </div>
         ))}
       </div>
     </div>
   );
-};
 
+            }
 const Boxes = () => {
   return (
     <section className="boxes-section">
